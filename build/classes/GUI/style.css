@@ -1,0 +1,94 @@
+.button
+{
+    -fx-background-color: #3F2B63;
+}
+.button:hover
+{
+    -fx-background-color: #2A1C42;
+}
+.button:pressed
+{
+    -fx-background-color: #7156D0;
+}
+.table-view.collum-header,
+.table-view .collum-header-background.filler
+{
+    -fx-cell-seize : 20;
+    -fx-background-color: #2D7528;
+}
+.table-view.collum-header.label
+{
+    -fx-text-fill: white ;
+    -fx-font-weight: bold;
+    -fx-alignment : CENTER_LEFT;
+}
+.tabel-view .cell
+{
+    -fx-cell-seize :30;
+    -fx-alignment:center-left;
+    -fx-text-fill: #000000;
+    -fx-alignment:CENTER_LEFT;
+}
+.text-field{
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 18;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color:  #7156D0;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: grey;
+}
+.text-area{
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 18;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color:  #7156D0;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: grey;
+}
+.workspace-grid .scroll-bar:vertical .increment-button ,
+.workspace-grid .scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+
+}
+.table-view{
+   -fx-background-color: transparent;
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0;
+}
+.table-cell {
+    -fx-alignment: BASELINE_CENTER;
+ }
+ .table-view .column-header {
+ -fx-font-weight: bold;
+   -fx-background-color: #FFF5EF;
+}
+
+.table-view .column-header .text {
+  -fx-underline: true;
+}
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #FFE3C1;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.table-view:focused .table-row-cell:filled:selected {
+    -fx-background-color: #BCD4E5;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-table-cell-border-color: #E0F2FF;
+}
