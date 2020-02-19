@@ -144,14 +144,15 @@ alert.showAndWait();
 
     @FXML
     private void modifier(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UpdateFXML.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLUpdate.fxml"));
+        Parent root1 =  fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Update User");
         stage.setScene(new Scene(root1));
         stage.show();
         
         FXMLUpdateController uac=fxmlLoader.getController();
+         
         uac.setTfnom1(nom.getCellData(Table.getSelectionModel().getSelectedIndex()));
         uac.setTfprenom1(prenom.getCellData(Table.getSelectionModel().getSelectedIndex()));
         uac.setTfemail1(email.getCellData(Table.getSelectionModel().getSelectedIndex()));

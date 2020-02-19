@@ -41,13 +41,27 @@ public class FXMLUpdateController implements Initializable {
     private TextField tfrole1;
     @FXML
     private Button btnvalider;
+    private Stage stage;
+    
+    
+    private utilisateur utilisateur;
+
+    public utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
+    }
+    
+    
 
     public TextField getTfnom1() {
         return tfnom1;
     }
 
     public void setTfnom1(String tfnom1) {
-        this.tfnom1.setText(tfnom1); 
+        this.tfnom1.setText(tfnom1);
     }
 
     public TextField getTfprenom1() {
@@ -55,7 +69,7 @@ public class FXMLUpdateController implements Initializable {
     }
 
     public void setTfprenom1(String tfprenom1) {
-        this.tfprenom1.setText(tfprenom1);
+         this.tfprenom1.setText(tfprenom1);   
     }
 
     public TextField getTfemail1() {
@@ -63,7 +77,7 @@ public class FXMLUpdateController implements Initializable {
     }
 
     public void setTfemail1(String tfemail1) {
-        this.tfemail1.setText(tfemail1);
+         this.tfemail1.setText(tfemail1);
     }
 
     public TextField getTflogin1() {
@@ -71,7 +85,7 @@ public class FXMLUpdateController implements Initializable {
     }
 
     public void setTflogin1(String tflogin1) {
-        this.tflogin1.setText(tflogin1);
+         this.tflogin1.setText(tflogin1);
     }
 
     public TextField getTfpassword1() {
@@ -79,7 +93,7 @@ public class FXMLUpdateController implements Initializable {
     }
 
     public void setTfpassword1(String tfpassword1) {
-        this.tfpassword1.setText(tfpassword1);
+         this.tfpassword1.setText(tfpassword1);
     }
 
     public TextField getTfrole1() {
@@ -87,16 +101,12 @@ public class FXMLUpdateController implements Initializable {
     }
 
     public void setTfrole1(String tfrole1) {
-        this.tfrole1.setText(tfrole1);
+         this.tfrole1.setText(tfrole1);
     }
 
-    public Button getBtnvalider() {
-        return btnvalider;
-    }
+   
 
-    public void setBtnvalider(Button btnvalider) {
-        this.btnvalider = btnvalider;
-    }
+    
 
     /**
      * Initializes the controller class.
@@ -108,16 +118,31 @@ public class FXMLUpdateController implements Initializable {
 
     @FXML
     private void valider(ActionEvent event) throws IOException {
-         utilisateurService cs=new utilisateurService();
+        utilisateurService cs=new utilisateurService();
+         
  cs.update(new utilisateur (tfnom1.getText(),tfprenom1.getText(),tfemail1.getText(),tflogin1.getText(),tfpassword1.getText(),tfrole1.getText()));        
         FXMLLoader loader=new FXMLLoader(getClass().getResource("FXMLutilisateur.fxml"));
         Parent root=loader.load();
         
         
-        JOptionPane.showMessageDialog(null, "club Bien modifié");
+        JOptionPane.showMessageDialog(null, "utilisateur modifié");
         final Node source = (Node) event.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+       
+        /*utilisateur.setNom(tfnom1.getText());
+           utilisateur.setPrenom(tfprenom1.getText());
+           utilisateur.setEmail(tfemail1.getText());
+           utilisateur.setLogin(tflogin1.getText());
+           utilisateur.setPassword(tfpassword1.getText());
+           utilisateur.setRole(tfrole1.getText());
+
+           utilisateurService cs=new utilisateurService();
+           cs.update(utilisateur);
+            
+
+            btnvalider = true;
+            stage.close();*/
    
     }
     

@@ -85,7 +85,7 @@ public class utilisateurService  implements IService<utilisateur>{
 
     @Override
     public void update(utilisateur t) {
-String sql = "UPDATE utilisateur SET Prenom='moetez'"
+/*String sql = "UPDATE utilisateur SET Prenom='moetez'"
                 + "WHERE id = 21";    
        try {   
                     ps=cnx.prepareStatement(sql);
@@ -94,7 +94,65 @@ String sql = "UPDATE utilisateur SET Prenom='moetez'"
  
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        }*/
+String req="UPDATE `utilisateur` SET `Nom`=?,`Prenom`=?,`Email`=?,`Login`=?,`Password`=?,`Role`=? WHERE Id=?";
+
+ PreparedStatement ste;
+        try {
+            ste = cnx.prepareStatement(req);
+            ste.setString(1,t.getNom());
+            ste.setString(2,t.getPrenom());
+            ste.setString(3,t.getEmail());
+            ste.setString(4,t.getLogin());
+            ste.setString(5,t.getPassword());
+            ste.setString(6,t.getRole());
+            ste.setInt(7,t.getId());
+
+            
+            
+
+             ste.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(utilisateurService.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+                        
+}
+ 
+    
+    public String authentification(utilisateur u){
+        
+       String login = u.getLogin();
+       String password = u.getPassword(); 
+       String role=u.getRole();
+       String userNameDB = "";
+       String passwordDB = "";
+       String roleDB = "";
+
+
+ String req= ("SELECT `login`, `password`, `role` FROM `utilisateur`");
+   try
+ { 
+ st=cnx.createStatement();
+            rs=st.executeQuery(req);
+
+            while(rs.next())
+ {
+ userNameDB = rs.getString("login");
+ passwordDB = rs.getString("password");
+ roleDB = rs.getString("role");
+ if(login.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Administrateur"))
+ return "Administrateur";
+ else if(login.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Responsable"))
+ return "Responsable";
+ else if(login.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Parent"))
+ return "Parent";
+ }
+ }
+ catch(SQLException e)
+ {
+ e.printStackTrace();
+ }
+ return "Invalid user credentials";
+}
  }
 
