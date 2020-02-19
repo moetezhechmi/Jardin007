@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #99f1ea;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXML_eventController">
+   <children>
+      <Label layoutX="82.0" layoutY="71.0" text="nom" />
+      <Label layoutX="59.0" layoutY="144.0" text="emplacement" />
+      <Label layoutX="83.0" layoutY="216.0" text="date" />
+      <TextField fx:id="txt_nom" layoutX="141.0" layoutY="67.0" />
+      <TextField fx:id="txt_emp" layoutX="141.0" layoutY="141.0" />
+      <TextField fx:id="txt_date" layoutX="131.0" layoutY="212.0" />
+      <TableView fx:id="tab_event" layoutX="315.0" layoutY="54.0" prefHeight="200.0" prefWidth="278.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="tab_nom" prefWidth="75.0" text="nom" />
+          <TableColumn fx:id="tab_emp" prefWidth="75.0" text="emplacement" />
+            <TableColumn fx:id="tab_date" prefWidth="75.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="48.0" layoutY="275.0" mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: #3d9595;" text="ajouter" />
+      <Button fx:id="modifier" layoutX="175.0" layoutY="275.0" mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: #3d9595;" text="modifier" />
+      <Button fx:id="supprimer" layoutX="50.0" layoutY="337.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #3d9595;" text="supprimer" />
+      <Button fx:id="afficher" layoutX="166.0" layoutY="337.0" mnemonicParsing="false" onAction="#afficher" style="-fx-background-color: #3d9595;" text="afficher" />
+      <ImageView fitHeight="118.0" fitWidth="172.0" layoutX="394.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/img.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
