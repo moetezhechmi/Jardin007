@@ -4,28 +4,33 @@
  * and open the template in the editor.
  */
 
-
+import java.io.IOException;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
  *
- * @author moetez
+ * @author Khaled
  */
-public class NewMain extends Application {
+public class NewFXMain extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/AjoutJardin.fxml"));
+    public void start(Stage primaryStage) throws IOException {
         
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLutilisateur.fxml"));
         Scene scene = new Scene(root);
         
-        stage.setScene(scene);
-        stage.show();
+        primaryStage.setTitle("javaFX");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+        
     }
 
     /**

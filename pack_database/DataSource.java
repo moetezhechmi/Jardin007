@@ -1,5 +1,5 @@
 
-package Test;
+package pack_database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,10 +9,9 @@ import java.util.logging.Logger;
 
 
 public class DataSource {
-    public static String serverUrl = "http://172.16.200.61/";
     private String username="root";
-    private String password="root";
-    private String url="jdbc:mysql://localhost:3306/pidev";
+    private String password="";
+    private String url="jdbc:mysql://127.0.0.1/pidev";
     private Connection cnx;
     private static DataSource instance;
      public Connection getcnx() {
