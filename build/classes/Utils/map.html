@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb8iX2wZG_gS_FQwvbu_nv8RENfx7F1lY&sensor;=false">
+    </script>
+    <!--
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb8iX2wZG_gS_FQwvbu_nv8RENfx7F1lY&callback=initMap"
+  type="text/javascript"></script>
+    -->
+     <script type="text/javascript">
+        var map;
+        var marker;
+
+        function get_click_position(event){
+            var location = event.latLng;
+            var lat = location.lat();
+            var lng = location.lng();
+            setMarkerPosition(lat, lng);
+            app.handle(lat, lng);
+        }
+
+        function setMarkerPosition(lat, lng) {
+            var clickLatLng = new google.maps.LatLng(lat, lng);
+            marker.setPosition(clickLatLng);
+        }
+
+        function startJumping(){
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        function stopJumping(){
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        function setMapCenter(lat, lng) {
+            var latlng = new google.maps.LatLng(lat, lng);
+            map.setCenter(latlng);
+        }
+
+        function switchSatellite() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
+            map.setOptions(mapOptions);
+            setLightMarkerIcon();
+        }
+
+        function switchRoadmap() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map.setOptions(mapOptions);
+            setDarkMarkerIcon();
+        }
+
+        function switchHybrid() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            map.setOptions(mapOptions);
+            setLightMarkerIcon();
+        }
+
+        function switchTerrain() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            };
+            map.setOptions(mapOptions);
+            setDarkMarkerIcon();
+        }
+
+        function initialize() {
+            var defLatLng = new google.maps.LatLng(36.8013284, 10.1863469);
+            var mapOptions = {
+                center: defLatLng,
+                zoom: 5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true,
+                panControl: false
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            google.maps.event.addListener(map, 'click', get_click_position);
+
+            marker = new google.maps.Marker({
+                position: defLatLng,
+                map: map,
+                icon: "Pin.png"
+            });
+
+            app.handle(0, 0);
+        }
+
+        function setDarkMarkerIcon() {
+            marker.setIcon("Pin.png");
+        }
+
+        function setLightMarkerIcon() {
+            marker.setIcon("Pin.png");
+        }
+
+    </script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>
