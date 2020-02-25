@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MesJardinsController">
+   <children>
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="148.0" prefHeight="200.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="nom" prefWidth="162.0" text="Nom" />
+            <TableColumn fx:id="mail" prefWidth="215.0" text="Email" />
+            <TableColumn fx:id="num" prefWidth="171.0" text="Numéro" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="214.0" layoutY="91.0" promptText="search" style="-fx-background-radius: 20;" styleClass="radius" />
+      <Button layoutX="46.0" layoutY="363.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-color: #46E8D2;" text="Supprimer" textAlignment="JUSTIFY" textFill="#f8f6f6" />
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="52.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/seo-social-web-network-internet_262_icon-icons.com_61518.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="394.0" layoutY="91.0" mnemonicParsing="false" onAction="#refresh" style="-fx-background-radius: 20; -fx-background-color: #46E8D2 #46E8D2;" text="Refresh" />
+      <Button layoutX="267.0" layoutY="364.0" mnemonicParsing="false" onAction="#modifier" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-color: #46E8D2 #46E8D2;" text="Modifier" textFill="#f8f6f6" />
+      <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="268.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-modifier-24.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="453.0" layoutY="364.0" mnemonicParsing="false" onAction="#divert" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-color: #46E8D2 #46E8D2;" text="Divertissement" textFill="#fcf8f8" />
+      <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="453.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-plus-26.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="11.0" layoutY="11.0" prefHeight="51.0" prefWidth="262.0" style="-fx-background-color: #46E8D2; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="71.0" layoutY="13.0" text="Mes Jardins" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="529.0" layoutY="37.0" mnemonicParsing="false" onAction="#ajout" style="-fx-background-radius: 20; -fx-background-color: #46E8D2 #46E8D2;" text="Ajouter Jardin" />
+   </children>
+</AnchorPane>

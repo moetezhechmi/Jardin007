@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='map' style='width: 400px; height: 300px;'></div>
+          <script>
+             mapboxgl.accessToken = 'pk.eyJ1IjoibW9ldGV6aGVjaG1pIiwiYSI6ImNrNnF5bnZ1YTAwZWozZm1sM2Jwems2Z2MifQ.pchfoydsUsjvUYxp04u71g';
+             var map = new mapboxgl.Map({
+             container: 'map',
+             style: 'mapbox://styles/mapbox/streets-v11'
+                 });
+          </script>
+        <div>TODO write content</div>
+    </body>
+</html>
