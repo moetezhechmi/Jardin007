@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiReclamation.AjoutReclamationController">
+   <children>
+      <VBox prefHeight="503.0" prefWidth="233.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="189.0" fitWidth="241.0" layoutX="-3.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Image1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane layoutX="230.0" layoutY="-1.0" prefHeight="101.0" prefWidth="571.0" style="-fx-background-color: #3F2B63;" stylesheets="@../gui/style.css" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <Label layoutX="50.0" layoutY="7.0" prefHeight="43.0" prefWidth="287.0" text="add new reclamation" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="45.0" prefHeight="10.0" prefWidth="132.0" text="WELDI" textFill="#f5f5f5">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField id="a" fx:id="tfName" layoutX="414.0" layoutY="195.0" prefHeight="33.0" prefWidth="149.0" stylesheets="@../gui/style.css" />
+      <TextArea fx:id="tfDescription" layoutX="623.0" layoutY="190.0" prefHeight="182.0" prefWidth="161.0" styleClass="collum-header-background" stylesheets="@../gui/style.css" />
+      <Button fx:id="btnEnvoyer" layoutX="284.0" layoutY="439.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" stylesheets="@../gui/style.css" text="Envoyer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnquitter" layoutX="637.0" layoutY="439.0" mnemonicParsing="false" onAction="#quitter" prefHeight="25.0" prefWidth="122.0" stylesheets="@../gui/style.css" text="Quitter" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="253.0" layoutY="199.0" text="Nom reclamation:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="120.0" text="Choisir incident :">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="281.0" text="Urgence:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="651.0" layoutY="145.0" text="Description :">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxUrgent" layoutX="413.0" layoutY="281.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboBox" layoutX="413.0" layoutY="120.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

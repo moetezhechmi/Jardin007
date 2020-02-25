@@ -5,6 +5,10 @@
  */
 package Entitie;
 
+import java.sql.Date;
+
+
+
 /**
  *
  * @author AmiR
@@ -12,31 +16,34 @@ package Entitie;
 public class Reclamation {
 
     private int id_rec;
+    private String nom;
+    private int id_user;
     private String name;
-    private String type;
-    private String etat;
-    private String createdby;
+    private Date createDat;
+    private String user_mail;
     private String urgence;
     private String descrition;
 
     public Reclamation() {
     }
 
-    public Reclamation(int id_rec, String name, String type, String etat, String createdby, String urgence, String descrition) {
+    public Reclamation(int id_rec, String nom, int id_user, String name, Date createDat, String user_mail, String urgence, String descrition) {
         this.id_rec = id_rec;
+        this.nom = nom;
+        this.id_user = id_user;
         this.name = name;
-        this.type = type;
-        this.etat = etat;
-        this.createdby = createdby;
+        this.createDat = createDat;
+        this.user_mail = user_mail;
         this.urgence = urgence;
         this.descrition = descrition;
     }
 
-    public Reclamation(String name, String type, String etat, String createdby, String urgence, String descrition) {
+    public Reclamation(String nom, int id_user, String name, Date createDat, String user_mail, String urgence, String descrition) {
+        this.nom = nom;
+        this.id_user = id_user;
         this.name = name;
-        this.type = type;
-        this.etat = etat;
-        this.createdby = createdby;
+        this.createDat = createDat;
+        this.user_mail = user_mail;
         this.urgence = urgence;
         this.descrition = descrition;
     }
@@ -49,6 +56,22 @@ public class Reclamation {
         this.id_rec = id_rec;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
+
     public String getName() {
         return name;
     }
@@ -57,28 +80,20 @@ public class Reclamation {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public Date getCreateDat() {
+        return createDat;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setCreateDat(Date createDat) {
+        this.createDat = createDat;
     }
 
-    public String getEtat() {
-        return etat;
+    public String getUser_mail() {
+        return user_mail;
     }
 
-    public void setEtat(String etat) {
-        this.etat = etat;
-    }
-
-    public String getCreatedby() {
-        return createdby;
-    }
-
-    public void setCreatedby(String createdby) {
-        this.createdby = createdby;
+    public void setUser_mail(String user_mail) {
+        this.user_mail = user_mail;
     }
 
     public String getUrgence() {
@@ -99,9 +114,10 @@ public class Reclamation {
 
     @Override
     public String toString() {
-        return "Reclamation{" + "id_rec=" + id_rec + ", name=" + name + ", type=" + type + ", etat=" + etat + ", createdby=" + createdby + ", urgence=" + urgence + ", descrition=" + descrition + '}';
+        return "Reclamation{" + "id_rec=" + id_rec + ", nom=" + nom + ", id_user=" + id_user + ", name=" + name + ", createDat=" + createDat + ", user_mail=" + user_mail + ", urgence=" + urgence + ", descrition=" + descrition + '}';
     }
-    
+
+   
     
 
 }

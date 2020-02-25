@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiReclamation.AcceuilReclamationController">
+   <children>
+      <VBox prefHeight="503.0" prefWidth="233.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="189.0" fitWidth="241.0" layoutX="-3.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Image1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <HBox layoutX="237.0" layoutY="170.0" prefHeight="326.0" prefWidth="593.0">
+         <children>
+            <GridPane prefHeight="270.0" prefWidth="704.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="285.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" stylesheets="@../gui/style.css" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="colNomInc" prefWidth="97.0" text="Nom incident" />
+                        <TableColumn fx:id="colNomRec" prefWidth="116.0" text="Nom reclamation" />
+                        <TableColumn fx:id="colDate" prefWidth="127.0" text="Date" />
+                        <TableColumn fx:id="ColUrgence" prefWidth="107.0" text="Urgence" />
+                        <TableColumn fx:id="colDesc" prefWidth="145.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/38934.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="chercher" onKeyReleased="#search" prefHeight="31.0" prefWidth="241.0" promptText="rechercher" />
+                        <Button mnemonicParsing="false" onAction="#Ajouter" prefHeight="29.0" prefWidth="172.0" stylesheets="@../gui/style.css" text="Add reclamation" textFill="#f8f7f7">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/111624614-add-vector-icon-isolated-on-transparent-background-add-transparency-logo-concept.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#GenerateActivitePdf" prefHeight="21.0" prefWidth="24.0" stylesheets="@../gui/style.css">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/pdf620x620.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#Supprimer" prefHeight="22.0" prefWidth="28.0" stylesheets="@../gui/style.css">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/Delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <Pane layoutX="232.0" layoutY="63.0" prefHeight="101.0" prefWidth="600.0" style="-fx-background-color: #3F2B63;" stylesheets="@../gui/style.css" AnchorPane.rightAnchor="-2.0">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" text="Liste des reclamations " textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="10.0" prefWidth="132.0" text="WELDI" textFill="#f5f5f5">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

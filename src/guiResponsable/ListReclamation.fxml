@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiResponsable.ListReclamationController">
+   <children>
+      <TableView fx:id="listerecl" layoutX="1.0" layoutY="168.0" prefHeight="333.0" prefWidth="842.0" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="a" prefWidth="86.0" text="Nom incident" />
+            <TableColumn fx:id="b" prefWidth="111.0" text="Nom reclamation" />
+            <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="0.0" />
+            <TableColumn fx:id="c" prefWidth="131.0" text="Description" />
+            <TableColumn fx:id="d" prefWidth="74.0" text="Urgence" />
+            <TableColumn fx:id="e" prefWidth="86.0" text="Date" />
+            <TableColumn fx:id="f" prefWidth="90.0" text="Nom Parent" />
+            <TableColumn fx:id="g" prefWidth="66.0" text="Prenom" />
+            <TableColumn fx:id="h" prefWidth="197.0" text="Email" />
+         </columns>
+      </TableView>
+      <Pane layoutX="240.0" layoutY="35.0" prefHeight="101.0" prefWidth="602.0" style="-fx-background-color: #3F2B63;" stylesheets="@style.css">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" text="Liste des reclamation des parents" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="10.0" prefWidth="132.0" text="WELDI" textFill="#f5f5f5">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutY="-1.0" prefHeight="137.0" prefWidth="241.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Pane prefHeight="126.0" prefWidth="222.0">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="277.0" layoutX="13.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Image1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <HBox layoutY="136.0" prefHeight="38.0" prefWidth="842.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/38934.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="chercher" onKeyReleased="#search" prefHeight="31.0" prefWidth="241.0" promptText="rechercher" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

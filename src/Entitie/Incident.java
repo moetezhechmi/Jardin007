@@ -5,6 +5,8 @@
  */
 package Entitie;
 
+import java.util.Date;
+
 /**
  *
  * @author AmiR
@@ -14,12 +16,18 @@ public class Incident {
     private String nom;
     private String description;
     private String createdby;
-    private String date_inc;
+    private Date date_inc;
 
     public Incident() {
     }
 
-    public Incident(int id_inc, String nom, String description, String createdby, String date_inc) {
+    public Incident(String nom, String description, String createdby) {
+        this.nom = nom;
+        this.description = description;
+        this.createdby = createdby;
+    }
+
+    public Incident(int id_inc, String nom, String description, String createdby, Date date_inc) {
         this.id_inc = id_inc;
         this.nom = nom;
         this.description = description;
@@ -27,10 +35,16 @@ public class Incident {
         this.date_inc = date_inc;
     }
 
-    public Incident(String nom, String description, String createdby, String date_inc) {
+    public Incident(String nom, String description, String createdby, Date date_inc) {
         this.nom = nom;
         this.description = description;
         this.createdby = createdby;
+        this.date_inc = date_inc;
+    }
+
+    public Incident(String nom, String description, Date date_inc) {
+        this.nom = nom;
+        this.description = description;
         this.date_inc = date_inc;
     }
 
@@ -66,11 +80,11 @@ public class Incident {
         this.createdby = createdby;
     }
 
-    public String getDate_inc() {
+    public Date getDate_inc() {
         return date_inc;
     }
 
-    public void setDate_inc(String date_inc) {
+    public void setDate_inc(Date date_inc) {
         this.date_inc = date_inc;
     }
 

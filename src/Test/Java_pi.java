@@ -19,9 +19,9 @@ public class Java_pi {
      */
     public static void main(String[] args) {
        
-        Incident p1 = new Incident ("probleme  ", "ce probleme est tres grave","amir","vendredi");
+        Incident p1 = new Incident ("probleme  ", "ce probleme est tres grave","amir");
         Service.ServiceIncident ps =new ServiceIncident();
-        ps.delete(2);
+       // ps.delete();
       //  ps.update(p1);
         //ps.insert(p1);
         ps.displayAll().forEach(System.out::println);

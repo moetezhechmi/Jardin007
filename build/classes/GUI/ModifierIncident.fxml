@@ -8,16 +8,10 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ModifierIncidentController">
    <children>
-      <Label layoutX="34.0" layoutY="57.0" text="id:" />
-      <Label layoutX="33.0" layoutY="132.0" text="Nom:" />
-      <Label layoutX="26.0" layoutY="230.0" text="Description:" />
-      <Label layoutX="446.0" layoutY="61.0" text="createdby:" />
-      <Label layoutX="446.0" layoutY="135.0" text="date:" />
-      <TextField fx:id="tfid" layoutX="105.0" layoutY="54.0" stylesheets="@style.css" />
-      <TextArea fx:id="tfDes" layoutX="105.0" layoutY="190.0" prefHeight="132.0" prefWidth="200.0" stylesheets="@style.css" />
-      <TextField fx:id="tfCreated" layoutX="520.0" layoutY="57.0" stylesheets="@style.css" />
-      <TextField fx:id="tfDate" layoutX="520.0" layoutY="131.0" stylesheets="@style.css" />
+      <Label layoutX="386.0" layoutY="125.0" text="Nom:" />
+      <Label layoutX="379.0" layoutY="223.0" text="Description:" />
+      <TextArea fx:id="tfDes" layoutX="458.0" layoutY="183.0" prefHeight="132.0" prefWidth="200.0" stylesheets="@style.css" />
       <Button fx:id="btnValider" layoutX="492.0" layoutY="383.0" mnemonicParsing="false" onAction="#Valider" prefHeight="25.0" prefWidth="125.0" stylesheets="@style.css" text="Valider" textFill="#f5f5f5" />
-      <TextField fx:id="tfNom" layoutX="105.0" layoutY="128.0" stylesheets="@style.css" />
+      <TextField fx:id="tfNom" layoutX="458.0" layoutY="121.0" stylesheets="@style.css" />
    </children>
 </AnchorPane>

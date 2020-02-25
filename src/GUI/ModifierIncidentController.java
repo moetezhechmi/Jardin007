@@ -7,6 +7,7 @@ package gui;
 
 import Entitie.Incident;
 import Service.ServiceIncident;
+import static Service.ServiceIncident.getDateOnCour;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,11 +31,7 @@ import javax.swing.JOptionPane;
 public class ModifierIncidentController implements Initializable {
 
     @FXML
-    private TextField tfid;
-    @FXML
     private TextArea tfDes;
-    @FXML
-    private TextField tfCreated;
     @FXML
     private TextField tfDate;
     @FXML
@@ -53,7 +50,7 @@ public class ModifierIncidentController implements Initializable {
     @FXML
     private void Valider(ActionEvent event) throws IOException {
         Service.ServiceIncident cs = new ServiceIncident();
-        cs.update(new Incident(tfNom.getText(), tfDes.getText(), tfCreated.getText(), tfDate.getText()));
+        cs.update(new Incident(tfNom.getText(), tfDes.getText(), getDateOnCour()));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AfficherIncident.fxml"));
         Parent root = loader.load();
 

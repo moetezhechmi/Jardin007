@@ -18,6 +18,8 @@ public class DataSource {
     private String url="jdbc:mysql://127.0.0.1/java_pi";
     private Connection cnx;
     private static DataSource instance;
+    
+    
      public Connection getcnx() {
         return cnx;
     }
@@ -31,6 +33,7 @@ public class DataSource {
             Logger.getLogger(DataSource.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
    
 public static DataSource getInstance(){
     if(instance==null)

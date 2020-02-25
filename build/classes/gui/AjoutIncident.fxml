@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjoutIncidentController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="503.0" prefWidth="233.0" style="-fx-background-color: #3F2B63;" />
+      <Pane layoutX="232.0" layoutY="63.0" prefHeight="101.0" prefWidth="600.0" style="-fx-background-color: #3F2B63;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="252.0" prefHeight="43.0" prefWidth="174.0" text="add incident" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="252.0" layoutY="43.0" prefHeight="10.0" prefWidth="132.0" text="WELDI" textFill="#f5f5f5">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="4.0" layoutY="-41.0" prefHeight="182.0" prefWidth="227.0">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="223.0" layoutX="9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Image1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TextField id="a" fx:id="tfNom" layoutX="463.0" layoutY="181.0" prefHeight="33.0" prefWidth="149.0" stylesheets="@style.css" />
+      <TextArea fx:id="tfDes" layoutX="463.0" layoutY="237.0" prefHeight="123.0" prefWidth="149.0" styleClass="collum-header-background" stylesheets="@style.css" />
+      <Button fx:id="btnAjouter" layoutX="350.0" layoutY="417.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="122.0" stylesheets="@style.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="339.0" layoutY="185.0" stylesheets="@style.css" text="Nom:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="286.0" stylesheets="@style.css" text="Description:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnquitter" layoutX="603.0" layoutY="417.0" mnemonicParsing="false" onAction="#quitter" prefHeight="25.0" prefWidth="122.0" stylesheets="@style.css" text="Quitter" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
