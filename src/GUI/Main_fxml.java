@@ -21,7 +21,7 @@ import javafx.stage.Stage;
  * @author ASUS
  */
 public class Main_fxml extends Application {
-    
+   
     @Override
     public void start(Stage primaryStage) throws IOException {
       Parent root = FXMLLoader.load(getClass().getResource("FXML_event.fxml"));

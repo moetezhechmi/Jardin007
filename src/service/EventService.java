@@ -9,6 +9,7 @@ package service;
 
 import Entity.event;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
+import static java.lang.Integer.parseInt;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import package_Database.DataSource;
 
 /**
@@ -86,12 +88,12 @@ public class EventService  implements IService<event>{
     
 
 
-    @Override
+    
     public void delete(int id) {
         String req="delete from tableevent where id =?";
         try{
             ps=cnx.prepareStatement(req);
-            ps.setInt(1, id);
+             ps.setInt(1, id);
             ps.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -100,16 +102,30 @@ public class EventService  implements IService<event>{
 
     @Override
     public void update(event t) {
-        String sq1="UPDATE tableevent set nom='disney',emplacement='mahdia'" 
-                +"WHERE id=12";
-        try{
-        ps=cnx.prepareStatement(sq1);
-        ps.executeUpdate();
-        }
-            catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+       try { 
+String req="UPDATE tableevent set Nom=?,emplacement=?,date=?,maxparticipant=? WHERE id=?";
+
+ PreparedStatement ste=cnx.prepareStatement(req);
+        
+            ste.setString(1,t.getNom());
+            ste.setString(2,t.getEmplacement());
+            ste.setString(3,t.getDate());
+            ste.setInt(4,t.getMaxparticipant());
+            ste.setInt(5 , t.getId()) ;
+            
+
+            
+
+             ste.executeUpdate();
+                  
+
+         } catch (SQLException ex) {
+            ex.printStackTrace();
         }
     }
+ 
+    
+    
 
     @Override
     public List<event> displayAll() {
@@ -120,12 +136,34 @@ public class EventService  implements IService<event>{
             rs=st.executeQuery(req);
             while (rs.next())
             {
-          list.add(new event (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4)));     
+          list.add(new event (rs.getInt(1) , rs.getString(2),rs.getString(3),rs.getString(4) ,rs.getInt(5) ,rs.getString(6) ));     
             }
         } catch (SQLException ex) {
             Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
         }
           return list;    }
+    
+    /**
+     *
+     * @return
+     */
+    public List< String > getIdj() {
+         List<String> list =new ArrayList<>();
+         
+         
+         String req="select nom from jardin ";
+          try {
+            st=cnx.createStatement();
+            rs=st.executeQuery(req);
+            while (rs.next())
+            {   
+                list.add(rs.getString(1));     
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          return list;    
+        }
     
   
     public List<event> rechercher() {
@@ -136,25 +174,59 @@ public class EventService  implements IService<event>{
             rs=st.executeQuery(req);
             while (rs.next())
             {
-          list.add(new event (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4)));     
+          list.add(new event (rs.getString(2),rs.getString(3),rs.getString(4)));     
             }
         } catch (SQLException ex) {
             Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
         }
           return list;    }
 
-       public void insert(event p){
-        String req=" insert into tableevent(nom,emplacement,date) values('"+p.getNom()+"','"+p.getEmplacement()+"','"+p.getDate()+"')";
+       public void insert(event p,String idJ){
+           
+        String r="select id from jardin where nom='"+idJ+"'";
         try {
             st=cnx.createStatement();
-        } catch (SQLException ex) {
-            Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
+            rs=st.executeQuery(r);
+            rs.next();
+            int id = rs.getInt(1);
+            String req=" insert into tableevent(nom,emplacement,date,maxparticipant,idJ,idUser) values('"+p.getNom()+"','"+p.getEmplacement()+"','"+p.getDate()+"',"+p.getMaxparticipant()+","+id+",1)";
+            st=cnx.createStatement();
             st.executeUpdate(req);
         } catch (SQLException ex) {
             Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
+         public void participer(event evenement) throws SQLException
+    {
+         String r="UPDATE  tableevent SET nbParticipe=nbParticipe+1 WHERE id=?";
+              Connection conn = DataSource.getInstance().getcnx();
+              PreparedStatement st = conn.prepareStatement(r);
+              st.setInt(1, evenement.getId());
+              st.executeUpdate();
+    }
+
+    @Override
+    public void insert(event t) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+       
+      public List<event> displayAllC(int id) {
+                String req="select tableevent.id , tableevent.nom , tableevent.emplacement , tableevent.date ,tableevent.maxparticipant , jardin.nom as nomJ from jardin , tableevent  where  jardin.id=tableevent.idJ and jardin.idC="+id+""; 
+
+     List<event> list =new ArrayList<>();
+        
+          try {
+            st=cnx.createStatement();
+            rs=st.executeQuery(req);
+            while (rs.next())
+            {   
+                list.add(new event (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getInt(5),rs.getString(6)));     
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          return list;    }
+    
+    
 }

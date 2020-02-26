@@ -6,6 +6,7 @@
 package package_Database;
 
 import Entity.event;
+import java.sql.SQLException;
 import service.EventService;
 
 /**
@@ -20,7 +21,7 @@ public class Main {
     
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         
      /*   DataSource ds1=DataSource.getInstance();
         System.out.println(ds1);
