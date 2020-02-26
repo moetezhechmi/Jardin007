@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Service/ServiceListRec.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Entity/utilisateur.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Service/ServiceReclamation.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/MesJardinsController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Utils/PDFutil.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Service/utilisateurService.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/ProfilResponsableController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/IIService/IServiceutilisateur.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/IIService/IServiceIncident.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Service/ServiceIncident.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Service/jardinService.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/Login.fxml</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/ListReclamationController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/ListReclamation.fxml</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/FXMLaffichageController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/NewMain.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/LoginController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/GUI/AjoutJardinController.java</file>
+            <file>file:/Users/moetez/Desktop/Jardin00007%202/src/Entity/Session.java</file>
+        </group>
+    </open-files>
+</project-private>
