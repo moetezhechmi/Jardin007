@@ -16,20 +16,51 @@ public class commentaire {
     private int id;
     
     private String texte;
+    private Integer nbr_etoile;
+    private String parent;
+    private String jardin;
     
     
      public commentaire() {
     }
+     
 
-    public commentaire(int id,String texte) {
+    public commentaire(int id, String texte, int nbr_etoile) {
         this.id = id;
         this.texte = texte;
+        this.nbr_etoile=nbr_etoile;
     }
 
    
 
-    public commentaire(String text) {
-        this.texte=text;
+    public commentaire(String texte,int nbr_etoile) {
+        this.texte=texte;
+        this.nbr_etoile=nbr_etoile;
+        
+    }
+
+    public commentaire(int id, String texte, Integer nbr_etoile, String parent, String jardin) {
+        this.id = id;
+        this.texte = texte;
+        this.nbr_etoile = nbr_etoile;
+        this.parent = parent;
+        this.jardin = jardin;
+    }
+
+    public String getParent() {
+        return parent;
+    }
+
+    public void setParent(String parent) {
+        this.parent = parent;
+    }
+
+    public String getJardin() {
+        return jardin;
+    }
+
+    public void setJardin(String jardin) {
+        this.jardin = jardin;
     }
 
  
@@ -56,10 +87,17 @@ public class commentaire {
     public void setTexte(String texte) {
         this.texte = texte;
     }
+        public int getNbr_etoile() {
+        return nbr_etoile;
+    }
+
+    public void setNote(int nbr_etoile) {
+        this.nbr_etoile = nbr_etoile;
+    }
 
     @Override
     public String toString() {
-        return "commentaire{" + "id=" + id + ", texte=" + texte + '}';
+        return "commentaire{" + "id=" + id +", nbr_etoile=" + nbr_etoile + ", texte=" + texte + '}';
     }
 
    

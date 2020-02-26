@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class DataSource {
     private String username="root";
     private String password="";
-    private String url="jdbc:mysql://127.0.0.1/esprit";
+    private String url="jdbc:mysql://127.0.0.1/jar";
     private Connection cnx;
     private static DataSource instance;
      public Connection getcnx() {

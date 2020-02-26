@@ -25,9 +25,9 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage ) throws IOException  {
-        Parent root = FXMLLoader.load(getClass().getResource("Commentaire.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("avisresponsabe.fxml"));
         Scene scene=new Scene (root);
-        primaryStage.setTitle("javaFX");
+        primaryStage.setTitle("Avis");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

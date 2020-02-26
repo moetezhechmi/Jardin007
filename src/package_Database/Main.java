@@ -26,7 +26,7 @@ public class Main {
   
 
      
-        commentaire p1 = new commentaire ("salut akrem");
+        commentaire p1 = new commentaire ("akrem",5);
         CommentaireService ps =new CommentaireService();
        //ps.delete(10);
         //ps.update(p1);
