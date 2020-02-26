@@ -8,6 +8,7 @@ package GUI;
 import Entity.club;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -24,6 +25,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -55,6 +57,10 @@ public class CrudController implements Initializable {
     @FXML
     private TableColumn<club, String> description;
     
+    @FXML
+    private ComboBox<String> idJ;
+
+    
     private List<club> listClub;
     private ObservableList<club> observablelist;
 /*public void setTf_nom(String tf_nom) {
@@ -78,7 +84,14 @@ public class CrudController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ClubService us = new ClubService();
+
+        ArrayList<String> ListeJ = new ArrayList<>();
+        ListeJ=(ArrayList<String>) us.getIdj();
+        ObservableList<String> ComboData = FXCollections.observableArrayList(ListeJ);
+        for(String s : ComboData){
+        idJ.getItems().add(s);
+        }
        
     }    
 
@@ -96,25 +109,24 @@ alert.setContentText("Veuillez remplir tous les champs!");
 alert.showAndWait();
                 }
         else{
-        sp.insert(new club (tf_nom.getText(),ta_des.getText()));
+        sp.insert(new club (tf_nom.getText(),ta_des.getText()),idJ.getValue());
         
         JOptionPane.showMessageDialog(null, "club ajouté");
         tf_nom.clear();
         ta_des.clear();
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLaffichage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLaffichage.fxml"));
  
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Liste des club");
         stage.setScene(new Scene(root1));
         stage.show();
-         ClubService us = new ClubService();
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        /* ClubService us = new ClubService();
         nomclub.setCellValueFactory(new PropertyValueFactory<>("nom"));
         description.setCellValueFactory(new PropertyValueFactory<>("descr"));
         listClub = us.displayAll();
         observablelist=FXCollections.observableArrayList(listClub);
-        Table.setItems(observablelist);
+        Table.setItems(observablelist);*/
         
         }
     }

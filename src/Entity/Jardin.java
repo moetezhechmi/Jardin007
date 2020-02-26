@@ -10,16 +10,23 @@ package Entity;
  * @author moetez
  */
 public class Jardin {
-    private int id;
-    private String nom;
-    Adresse adresse;
-    private String numTel;
-    private String mail;
-    private String imageUrl;
+        private int id;
+        private String nom;
+        Adresse adresse;
+        private String numTel;
+        private String mail;
+        private String imageUrl;
 
     public Jardin() {
     }
 
+    public Jardin(int id, String nom, String numTel, String mail) {
+        this.id = id;
+        this.nom = nom;
+        this.numTel = numTel;
+        this.mail = mail;
+    }
+    
     public String getImageUrl() {
         return imageUrl;
     }

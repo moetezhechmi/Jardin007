@@ -5,6 +5,7 @@
  */
 package service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -12,9 +13,9 @@ import java.util.List;
  * @author Daytech
  */
 public interface IService<T> {
-    void insert(T t);
-    List<T> displayAll();
-    void delete(int id);
-    void update (T t);
+    void insert(T t)throws SQLException;
+    List<T> displayAll()throws SQLException;
+    void delete(int id)throws SQLException;
+    void update (T t)throws SQLException;
     
 }

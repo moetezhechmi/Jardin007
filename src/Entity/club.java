@@ -13,6 +13,38 @@ public class club {
     private int id;
     private String nom;
     private String descr;
+    private int nbparticipant;
+    private String nomJ;
+
+    public club(int id, String nom, String descr, int nbparticipant, String nomJ) {
+        this.id = id;
+        this.nom = nom;
+        this.descr = descr;
+        this.nbparticipant = nbparticipant;
+        this.nomJ = nomJ;
+    }
+
+    public club(String nom, String descr, int nbparticipant, String nomJ) {
+        this.nom = nom;
+        this.descr = descr;
+        this.nbparticipant = nbparticipant;
+        this.nomJ = nomJ;
+    }
+
+    public int getNbparticipant() {
+        return nbparticipant;
+    }
+
+    public void setNbparticipant(int nbparticipant) {
+        this.nbparticipant = nbparticipant;
+    }
+
+    public club(int id, String nom, String descr, int nbparticipant) {
+        this.id = id;
+        this.nom = nom;
+        this.descr = descr;
+        this.nbparticipant = nbparticipant;
+    }
     
     
      public club() {
@@ -57,11 +89,23 @@ public class club {
         this.descr = descr;
     }
 
-    @Override
-    public String toString() {
-        return "club{" + "id=" + id + ", nom=" + nom + ", descr=" + descr + '}';
+    public String getNomJ() {
+        return nomJ;
+    }
+
+    public void setNomJ(String nomJ) {
+        this.nomJ = nomJ;
     }
     
+    
+    
+
+    @Override
+    public String toString() {
+        return "club{" + "id=" + id + ", nom=" + nom + ", descr=" + descr + ", nbparticipant=" + nbparticipant + '}';
+    }
+
+   
 
    
      

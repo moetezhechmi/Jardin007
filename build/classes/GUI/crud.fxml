@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -9,41 +10,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CrudController">
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="801.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CrudController">
    <children>
-      <ImageView fitHeight="533.0" fitWidth="574.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/img1.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="25.0" layoutY="131.0" text="NomClub">
+      <Label layoutX="205.0" layoutY="90.0" text="NomClub" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="235.0" text="Description">
+      <Label layoutX="205.0" layoutY="198.0" text="Description" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_nom" layoutX="144.0" layoutY="144.0" />
-      <TextArea fx:id="ta_des" layoutX="139.0" layoutY="228.0" prefHeight="131.0" prefWidth="158.0" />
-      <ImageView fitHeight="124.0" fitWidth="167.0" layoutX="74.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/img.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="bt_afficher" layoutX="384.0" layoutY="69.0" mnemonicParsing="false" onAction="#afficher" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: ccf3ff;" text="Afficher" />
-      <Button fx:id="btn_ajout" layoutX="384.0" layoutY="18.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: ccf3ff;" text="Ajouter" />
-      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="384.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="tf_nom" layoutX="354.0" layoutY="81.0" prefHeight="36.0" prefWidth="195.0" />
+      <TextArea fx:id="ta_des" layoutX="354.0" layoutY="139.0" prefHeight="187.0" prefWidth="206.0" />
+      <Button fx:id="bt_afficher" layoutX="513.0" layoutY="468.0" mnemonicParsing="false" onAction="#afficher" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: bfa4a4; -fx-background-radius: 20;" text="Afficher" />
+      <Button fx:id="btn_ajout" layoutX="270.0" layoutY="468.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: bfa4a4; -fx-background-radius: 20;" text="Ajouter" />
+      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="281.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/60745.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="384.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="520.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/50763.png" />
          </image>
       </ImageView>
+      <ComboBox fx:id="idJ" layoutX="363.0" layoutY="370.0" prefHeight="36.0" prefWidth="195.0" promptText="Séléctionner jardin" />
+      <Label layoutX="221.0" layoutY="375.0" text="Jardin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

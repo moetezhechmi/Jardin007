@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="809.0" style="-fx-background-color: #2D2940;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <TableView fx:id="Table" layoutX="17.0" layoutY="128.0" prefHeight="360.0" prefWidth="783.0">
+         <columns>
+            <TableColumn fx:id="idenf" prefWidth="75.0" text="idenf" />
+            <TableColumn fx:id="nomenf" prefWidth="75.0" text="nomenf" />
+            <TableColumn fx:id="prenomenf" prefWidth="75.0" text="prenomenf" />
+            <TableColumn fx:id="sexe" prefWidth="75.0" text="sexe" />
+            <TableColumn fx:id="date_de_naissance" prefWidth="130.99993896484375" text="date de naissance" />
+            <TableColumn fx:id="photoenf" prefWidth="105.333251953125" text="photoenf" />
+            <TableColumn fx:id="nomjardin" prefWidth="112.0" text="nom jardin" />
+            <TableColumn fx:id="etat" prefWidth="130.99993896484375" text="etat" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnsupprimer" layoutX="679.0" layoutY="77.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #40A497; -fx-background-radius: 20;" text="Supprimer" textFill="#fff8f8">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
