@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1087.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ParentFXMLController">
+   <children>
+      <AnchorPane prefHeight="519.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="160.0" prefHeight="356.0" prefWidth="262.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0" />
+            <ImageView fitHeight="173.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/84324913_592211941625483_7882243884221202432_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+            <Pane layoutX="76.0" layoutY="106.0" />
+            <TableView fx:id="Table" layoutX="23.0" layoutY="236.0" prefHeight="203.0" prefWidth="783.0">
+               <columns>
+                  <TableColumn fx:id="idenf" prefWidth="75.0" text="idenf" />
+                  <TableColumn fx:id="nomenf" prefWidth="75.0" text="nomenf" />
+                  <TableColumn fx:id="prenomenf" prefWidth="75.0" text="prenomenf" />
+                  <TableColumn fx:id="sexe" prefWidth="75.0" text="sexe" />
+                  <TableColumn fx:id="date_de_naissance" prefWidth="130.99993896484375" text="date de naissance" />
+                  <TableColumn fx:id="photoenf" prefWidth="105.333251953125" text="photoenf" />
+                  <TableColumn fx:id="nomjardin" prefWidth="112.0" text="nom jardin" />
+                  <TableColumn fx:id="etat" prefWidth="130.99993896484375" text="etat" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnajouter" layoutX="108.0" layoutY="493.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+            <Button fx:id="btnsupprimer" layoutX="293.0" layoutY="493.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+            <Button fx:id="btnafficher" layoutX="197.0" layoutY="493.0" mnemonicParsing="false" onAction="#afficher" text="Afficher" />
+            <Button fx:id="btnmodifier" layoutX="395.0" layoutY="493.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

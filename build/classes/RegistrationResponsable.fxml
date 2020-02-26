@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistrationResponsableController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="6.0" layoutY="7.0" prefHeight="463.0" prefWidth="939.0">
+         <children>
+            <Label layoutX="478.0" layoutY="104.0" text="Inscription Responsable">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="191.0" text="nom">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="387.0" layoutY="243.0" text="prenom">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="387.0" layoutY="293.0" text="email">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="666.0" layoutY="192.0" text="login">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="666.0" layoutY="244.0" text="password">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="666.0" layoutY="294.0" text="role">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField fx:id="tfnom" layoutX="445.0" layoutY="186.0" promptText="nom" stylesheets="@style.css" />
+            <TextField fx:id="tfprenom" layoutX="445.0" layoutY="238.0" promptText="prenom" stylesheets="@style.css" />
+            <TextField fx:id="tfemail" layoutX="445.0" layoutY="288.0" promptText="\@email" stylesheets="@style.css" />
+            <TextField fx:id="tflogin" layoutX="720.0" layoutY="187.0" promptText="login" stylesheets="@style.css" />
+            <PasswordField fx:id="tfpassword" layoutX="720.0" layoutY="239.0" promptText="*********" stylesheets="@style.css" />
+            <TextField fx:id="tfrole" layoutX="720.0" layoutY="289.0" promptText="role" stylesheets="@style.css" />
+            <Button fx:id="btnajouter" layoutX="541.0" layoutY="368.0" mnemonicParsing="false" onAction="#ajouterresponsable" stylesheets="@style.css" text="ajouter" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="btnretour" layoutX="703.0" layoutY="368.0" mnemonicParsing="false" onAction="#retour" stylesheets="@style.css" text="retour" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <VBox layoutY="-7.0" prefHeight="453.0" prefWidth="353.0">
+               <children>
+                  <ImageView fitHeight="469.0" fitWidth="348.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/87348403_194727578416201_820727460961189888_n.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <HBox layoutX="334.0" layoutY="-7.0" prefHeight="100.0" prefWidth="606.0" style="-fx-background-color: #3F2B63;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

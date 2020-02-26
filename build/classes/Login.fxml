@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <Pane layoutX="384.0" layoutY="196.0" prefHeight="331.0" prefWidth="474.0">
+         <children>
+            <Label layoutX="225.0" text="Login">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="103.0" text="Username">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="174.0" text="Password">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfusername" layoutX="147.0" layoutY="98.0" prefHeight="33.0" prefWidth="282.0" promptText="username" stylesheets="@style.css" />
+            <PasswordField fx:id="tfpassword" layoutX="147.0" layoutY="169.0" prefHeight="33.0" prefWidth="282.0" promptText="********" stylesheets="@style.css" />
+            <Button fx:id="btnlog" layoutX="128.0" layoutY="282.0" mnemonicParsing="false" onAction="#connecter" prefHeight="29.0" prefWidth="97.0" stylesheets="@style.css" text="Log On" textFill="WHITE" />
+            <Button fx:id="btnregister" layoutX="356.0" layoutY="282.0" mnemonicParsing="false" onAction="#register" prefHeight="29.0" prefWidth="112.0" stylesheets="@style.css" text="Register" textFill="WHITE" />
+            <Hyperlink fx:id="linkpwd" layoutX="210.0" layoutY="214.0" onAction="#changermdp" text="Forget Password ?" />
+         </children>
+      </Pane>
+      <VBox prefHeight="582.0" prefWidth="412.0" style="-fx-background-color: #3F2B63;" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="585.0" fitWidth="412.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/87348403_194727578416201_820727460961189888_n.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox layoutX="411.0" layoutY="-8.0" prefHeight="193.0" prefWidth="474.0" style="-fx-background-color: #3F2B63;" stylesheets="@style.css" />
+   </children>
+</AnchorPane>

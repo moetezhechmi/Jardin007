@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1087.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLupdateEnfController">
+   <children>
+      <AnchorPane prefHeight="519.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="160.0" prefHeight="356.0" prefWidth="262.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0" />
+            <ImageView fitHeight="173.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/84324913_592211941625483_7882243884221202432_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+            <Pane layoutX="76.0" layoutY="106.0" />
+            <TextField fx:id="tfprenomenf1" layoutX="517.0" layoutY="224.0" prefHeight="43.0" prefWidth="172.0" promptText="Prenom" />
+            <TextField fx:id="tfnomenf1" layoutX="516.0" layoutY="166.0" prefHeight="43.0" prefWidth="172.0" promptText="Nom" />
+            <Label layoutX="362.0" layoutY="419.0" text="Photo" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="355.0" layoutY="174.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="354.0" text="Date de naissance" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="288.0" text="Sexe" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="355.0" layoutY="232.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datepicker1" layoutX="516.0" layoutY="346.0" prefHeight="43.0" prefWidth="190.0" promptText="Date de naissance" />
+            <Label layoutX="455.0" layoutY="70.0" text="Modification du profil " textFill="#f9f9f9">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnvalider" layoutX="553.0" layoutY="600.0" mnemonicParsing="false" onAction="#valider" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: white;" text="Valider" />
+            <Button fx:id="btnphoto1" layoutX="516.0" layoutY="411.0" mnemonicParsing="false" onAction="#upload" prefHeight="43.0" prefWidth="117.0" text="Upload image" />
+            <ComboBox fx:id="combo1" layoutX="514.0" layoutY="280.0" prefHeight="43.0" prefWidth="179.0" />
+            <ComboBox fx:id="idJ1" layoutX="516.0" layoutY="478.0" prefHeight="43.0" prefWidth="172.0" />
+            <Label layoutX="356.0" layoutY="486.0" text="Choisir Jardin" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="359.0" layoutY="552.0" text="Etat" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="etat1" layoutX="516.0" layoutY="544.0" prefHeight="43.0" prefWidth="172.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
